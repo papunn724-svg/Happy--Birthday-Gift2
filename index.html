@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday,My Love❤️</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <div class="loader-text">Preparing something magical…</div>
+    </div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div id="cursor"></div>
+  <div id="cursor-trail"></div>
+
+  <!-- SCROLL PROGRESS -->
+  <div id="scroll-progress"></div>
+
+  <!-- MUSIC TOGGLE -->
+  <button id="music-btn" aria-label="Toggle music">
+    <span class="music-icon">♪</span>
+    <span class="music-label">Music</span>
+  </button>
+
+  <!-- NAVIGATION -->
+  <nav id="nav">
+    <div class="nav-logo">Aditi ✦</div>
+    <div class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#cake-section">Cake</a>
+      <a href="#letter">Letter</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════ -->
+  <section id="hero">
+    <canvas id="particle-canvas"></canvas>
+    <div class="hero-glow-follow" id="glow-follow"></div>
+
+    <div class="hero-content">
+      <div class="greeting-tag" id="time-greeting">Today is Your Day</div>
+      <h1 class="hero-title">
+        <span class="title-line line-1">Happy</span>
+        <span class="title-line line-2">Birthday</span>
+        <span class="title-line line-3 italic-name">Aditi</span>
+      </h1>
+      <p class="hero-subtitle">The world became more beautiful the day you were born.</p>
+      <button class="cta-btn" id="open-surprise-btn">
+        <span class="btn-text">Open Your Surprise</span>
+        <span class="btn-glow"></span>
+      </button>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TRANSITION OVERLAY (for surprise trigger)
+  ═══════════════════════════════════════════ -->
+  <div id="transition-overlay">
+    <canvas id="confetti-canvas"></canvas>
+    <div class="transition-content">
+      <div class="surprise-emoji">🎂</div>
+      <h2 class="surprise-title">A Surprise, Just for You</h2>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       CAKE SECTION
+  ═══════════════════════════════════════════ -->
+  <section id="cake-section">
+    <div class="section-header">
+      <span class="section-tag">Make a Wish</span>
+      <h2 class="section-title">Blow Out The Candles</h2>
+    </div>
+
+    <div class="cake-scene" id="cake-scene">
+      <!-- CSS Birthday Cake -->
+      <div class="cake-wrapper" id="cake-wrapper">
+        <div class="cake-glow-ring"></div>
+
+        <!-- Candles -->
+        <div class="candles-row" id="candles-row">
+          <div class="candle candle-pink" data-index="0">
+            <div class="candle-smoke hidden"></div>
+            <div class="candle-body"></div>
+            <div class="candle-flame">
+              <div class="flame-inner"></div>
+            </div>
+          </div>
+          <div class="candle candle-blue" data-index="1">
+            <div class="candle-smoke hidden"></div>
+            <div class="candle-body"></div>
+            <div class="candle-flame">
+              <div class="flame-inner"></div>
+            </div>
+          </div>
+          <div class="candle candle-yellow" data-index="2">
+            <div class="candle-smoke hidden"></div>
+            <div class="candle-body"></div>
+            <div class="candle-flame">
+              <div class="flame-inner"></div>
+            </div>
+          </div>
+          <div class="candle candle-green" data-index="3">
+            <div class="candle-smoke hidden"></div>
+            <div class="candle-body"></div>
+            <div class="candle-flame">
+              <div class="flame-inner"></div>
+            </div>
+          </div>
+          <div class="candle candle-orange" data-index="4">
+            <div class="candle-smoke hidden"></div>
+            <div class="candle-body"></div>
+            <div class="candle-flame">
+              <div class="flame-inner"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cake Layers -->
+        <div class="cake-top-layer">
+          <div class="cake-frosting-top"></div>
+          <div class="cake-sprinkles">
+            <span class="sprinkle s1"></span>
+            <span class="sprinkle s2"></span>
+            <span class="sprinkle s3"></span>
+            <span class="sprinkle s4"></span>
+            <span class="sprinkle s5"></span>
+            <span class="sprinkle s6"></span>
+          </div>
+          <span class="cake-text-decor">Happy Birthday</span>
+        </div>
+        <div class="cake-mid-layer">
+          <div class="cake-frosting-mid"></div>
+          <div class="cake-sprinkles">
+            <span class="sprinkle s1"></span>
+            <span class="sprinkle s2"></span>
+            <span class="sprinkle s3"></span>
+            <span class="sprinkle s4"></span>
+            <span class="sprinkle s5"></span>
+            <span class="sprinkle s6"></span>
+            <span class="sprinkle s7"></span>
+            <span class="sprinkle s8"></span>
+          </div>
+        </div>
+        <div class="cake-base-layer">
+          <div class="cake-frosting-base"></div>
+          <div class="cake-sprinkles">
+            <span class="sprinkle s1"></span>
+            <span class="sprinkle s2"></span>
+            <span class="sprinkle s3"></span>
+            <span class="sprinkle s4"></span>
+            <span class="sprinkle s5"></span>
+            <span class="sprinkle s6"></span>
+            <span class="sprinkle s7"></span>
+            <span class="sprinkle s8"></span>
+            <span class="sprinkle s9"></span>
+            <span class="sprinkle s10"></span>
+          </div>
+        </div>
+        <div class="cake-plate"></div>
+      </div>
+
+      <!-- Blow controls -->
+      <div class="blow-controls" id="blow-controls">
+        <p class="blow-hint">Take a deep breath and…</p>
+        <button class="blow-btn" id="blow-btn">
+          <span>💨 Blow the Candles!</span>
+        </button>
+        <p class="mic-hint" id="mic-hint">or <button id="mic-btn" class="mic-link">use your microphone</button></p>
+      </div>
+
+      <!-- Post-wish message -->
+      <div class="wish-message hidden" id="wish-message">
+        <p class="typewriter" id="wish-text"></p>
+      </div>
+    </div>
+
+    <!-- Fireworks canvas -->
+    <canvas id="fireworks-canvas"></canvas>
+  </section>
+
+
+
+  <!-- ═══════════════════════════════════════════
+       LETTER / ENVELOPE SECTION
+  ═══════════════════════════════════════════ -->
+  <section id="letter">
+    <div class="section-header">
+      <span class="section-tag">A Personal Note</span>
+      <h2 class="section-title">For Your Eyes Only</h2>
+    </div>
+
+    <div class="envelope-scene" id="envelope-scene">
+      <div class="envelope" id="envelope">
+        <div class="env-body">
+          <div class="env-flap" id="env-flap"></div>
+          <div class="env-left-fold"></div>
+          <div class="env-right-fold"></div>
+          <div class="env-bottom-fold"></div>
+          <div class="env-seal">
+            <span>♥</span>
+          </div>
+        </div>
+        <div class="open-prompt" id="open-prompt">Tap to open ✉️</div>
+      </div>
+
+      <div class="letter-paper hidden" id="letter-paper">
+        <div class="letter-header">
+          <span class="letter-date" id="letter-date"></span>
+        </div>
+        <div class="letter-body">
+          <p class="letter-salutation">Dear Aditi,</p>
+          <p class="letter-para" id="letter-p1"></p>
+          <p class="letter-para" id="letter-p2"></p>
+          <p class="letter-para" id="letter-p3"></p>
+          <p class="letter-sign">With all the love in the world,<br><em>Someone Who Cares</em> 💛</p>
+        </div>
+        <div class="letter-hearts" id="letter-hearts"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WISHES GENERATOR
+  ═══════════════════════════════════════════ -->
+  <section id="wishes">
+    <div class="section-header">
+      <span class="section-tag">Birthday Magic</span>
+      <h2 class="section-title">Spin a Wish for You</h2>
+    </div>
+    <div class="wishes-scene">
+      <div class="wish-display" id="wish-display">
+        <div class="wish-quote" id="wish-quote">Click below to receive your wish ✨</div>
+      </div>
+      <button class="wish-spin-btn" id="wish-spin-btn">
+        ✦ Spin a New Wish ✦
+      </button>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FINAL CELEBRATION
+  ═══════════════════════════════════════════ -->
+  <section id="finale">
+    <canvas id="finale-canvas"></canvas>
+    <div class="finale-content reveal-item">
+      <div class="lanterns-row" id="lanterns"></div>
+      <p class="finale-sub">From this moment forward —</p>
+      <h2 class="finale-title">You make the world brighter<br>every single day ✨</h2>
+      <p class="finale-footer">Happy Birthday, My world. Here's to every beautiful thing ahead. 🌟</p>
+      <div class="balloon-row" id="balloons"></div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
